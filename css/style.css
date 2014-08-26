@@ -1,0 +1,91 @@
+html {
+  position: relative;
+}
+
+body {
+  color: #51504A;
+  background: #F9F7F5;
+}
+
+
+.post {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+[ng-click] {
+  cursor: pointer;
+}
+
+.frame {
+  position: fixed;
+  right: 0;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.navbar-placeholer {
+  height: 60px;
+}
+
+.freeze {
+  overflow: hidden;
+}
+
+.left-nav {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 240px;
+  overflow: auto;
+  bottom: 0;
+  background: #F7F6F1;
+
+}
+.left-nav .list-group li{
+  background: #F7F6F1;
+}
+.left-nav .list-group a {
+  display: block;
+  padding: 15px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #4F4E49;
+  outline: none;
+
+}
+
+.left-nav .list-group a:hover {
+  background-color: #eee;
+  color: #000;
+}
+.left-nav .list-group .active a {
+  background-color: #EEEDE9;
+  border: none;
+  outline: none;
+  /*color: #fff;*/
+}
+.left-nav .list-group-item.active {
+  border-color: #DDDDDD;
+}
+
+.left-nav .list-group-item {
+  padding: 0;
+}
+
+.list-group {
+  border-radius: 0;
+  margin: -1px 0;
+}
+
+.main {
+  margin-left: 240px;
+}
+
+article {
+  padding: 2em 6em;
+  max-width: 960px;
+}

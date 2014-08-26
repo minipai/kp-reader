@@ -1,0 +1,49 @@
+<html ng-app="kpApp">
+<head>
+	<meta charset="UTF-8" />
+
+	<title>柯p新政閱讀器</title>
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body ng-controller="MainCtrl">
+	<header class="navbar  navbar-default navbar-fixed-top" id="top" role="banner">
+		<div class="navbar-header">
+			<a href="#/" class="navbar-brand">柯p新政閱讀器</a>
+		</div>
+		<nav>
+			<ul class="nav navbar-nav">
+				<li><a href="http://kptaipei.tw" target="_blank">柯文哲官網</a></li>
+				<li>
+					<a href="http://unlimited.kptaipei.tw" target="_blank">野生官網活動介紹</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="navbar-placeholer"></div>
+
+	<div class="left-nav">
+		<div ng-controller="PostIndexCtrl">
+		  <ul class="list-group" hotkey="{k: next, j: prev}">
+		    <li class='list-group-item' ng-repeat="post in posts" ng-class="{active: posts.currentIndex==$index}">
+		      <a href="#post/{{post.id}}">
+		        {{post.shortTitle}}
+		      </a>
+		    </li>
+		  </ul>
+		</div>
+	</div>
+	<div class="main">
+		<ng-view></ng-view>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-route.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-sanitize.min.js"></script>
+	<script src="js/hotkey.min.js"></script>
+	<script src="js/lodash.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
